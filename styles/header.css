@@ -1,0 +1,10 @@
+header {
+    width: 100%;
+
+}
+
+header .branding #logo {
+    max-height: 70px;
+    max-width: 25px;
+    object-fit: cover;
+}
