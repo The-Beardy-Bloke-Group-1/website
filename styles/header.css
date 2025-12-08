@@ -1,10 +1,10 @@
 header {
     /* width: 100%; */
     display: flex;
+    padding-top: 2em;
 }
 
 header .branding {
-    padding-top: 2em;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -40,4 +40,14 @@ header .branding #name {
     font-size: 1.5em;
 
     margin: 0;
+}
+
+#theme-switcher {
+    filter: brightness(var(--brightness));
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#theme-switcher[active] {
+    transform: rotate(180deg);
 }
