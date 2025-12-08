@@ -18,6 +18,7 @@ h2 {
 .image-text-group {
     display: flex;
     width: 100%;
+    max-width: 750px;
     gap: 2em;
 
     justify-content: center;
@@ -32,5 +33,5 @@ h2 {
 
 .image-text-group .text {
     width: 100%;
-    text-align: center;
+    text-align: start;
 }
