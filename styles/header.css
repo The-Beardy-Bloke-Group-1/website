@@ -1,10 +1,10 @@
 header {
     /* width: 100%; */
     display: flex;
-    margin-top: 1em;
 }
 
 header .branding {
+    padding-top: 2em;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -17,6 +17,8 @@ header .nav {
     align-items: center;
     justify-content: end;
 
+    padding: 0 1em;
+
     width: 100%;
 }
 
@@ -26,8 +28,10 @@ header .nav a {
 
 header .branding #logo {
     max-height: 70px;
-    max-width: 70px;
+    max-width: 50px;
     object-fit: cover;
+
+    color: var(--primary);
 }
 
 header .branding #name {
