@@ -1,10 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=The+Girl+Next+Door&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --body-width: 1024px;
+}
 
 html, body {
     margin: 0;
-    padding: 0;
+    
+    background-color: var(--bg-primary);
+    font-family: var(--font-default);
+    color: var(--text);
+    min-height: 100%;
 }
 
 body {
-    background-color: var(--bg-primary);
+    max-width: var(--body-width);
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 2em;
+
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+
+    height: 100vh;
+}
+
+/* header, main {
+    max-width: var(--body-width);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 2em;
+} */
+
+main {
+    margin-top: 2em;
 }

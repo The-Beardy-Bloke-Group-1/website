@@ -9,24 +9,64 @@
     <link rel="stylesheet" href="styles/conf/colours.css">
     <link rel="stylesheet" href="styles/conf/fonts.css">
     <link rel="stylesheet" href="styles/root.css">
+    <link rel="stylesheet" href="styles/interaction.css">
+    <link rel="stylesheet" href="styles/content.css">
+
     <link rel="stylesheet" href="styles/header.css">
+
+    <svg width="0" height="0">
+        <filter id="wavy">
+          <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="6"/>
+        </filter>
+      </svg>
+      
 </head>
 <body>
     <header>
         <div class="branding">
             <img id="logo" src="images/branding/logo-wh.png"></img>
-            <p id="name">A Beardy Bloke</p>
+            <p id="name">The Beardy Bloke</p>
         </div>
 
         <div class="nav">
-            <a href="#">Home</a>
-            <a href="#">Books</a>
-            <a >Talks</a>
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="#">Talks</a>
         </div>
+<!-- awsdwf -->
     </header>
 
+    <img class="hr" src="images/hr.png"></img>
+
     <main>
-        
+        <h1>Showcase</h1>
+        <div class="image-text-group">
+            <img class="image" src="images/content/cover.png"></img>
+            <div class="text">
+                <h2>
+                    Hi,<br>
+                    I am The Beardy Bloke!
+                </h2>
+
+                <p>
+                    I started writing poetry a few years ago after discovering that I am shockingly bad at journaling, talking to people about my feelings or writing a diary.
+                </p>
+
+                <p>
+                    My real name is Mark Webb. I am a 40plus-year-old teacher in a huge inner city college who writes down his rambling thoughts in verse.
+                </p>
+
+                <p>
+                    My book is not your normal poetry book though. In Volume One, I have included 25 poems and, at the back of the book, have written a brief description of why I wrote each one, where I was in my life and what I was thinking.
+                </p>
+
+                <p>
+                    I hope that with this additional insight people will get the opportunity to appreciate and relate to the poems a whole lot more.
+                </p>
+            </div>
+        </div>
+       
     </main>
 </body>
 <script>
