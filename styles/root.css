@@ -36,3 +36,25 @@ body {
     margin-left: auto;
     padding: 0 2em;
 } */
+
+main {
+    margin-top: 2em;
+}
+
+.sideimageleft{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 478px;
+}
+.sideimageright{
+    position: fixed;
+    right: -100px;
+    top: 0;
+    width: 478px;
+}
+.sideimageleft img, .sideimageright img{
+    display: block;
+    width: 20%;
+    padding: 15px;
+}

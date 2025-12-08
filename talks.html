@@ -5,30 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles/conf/colours.css">
+    <link id="theme-link" rel="stylesheet" href="styles/conf/colours.css">
     <link rel="stylesheet" href="styles/conf/fonts.css">
     <link rel="stylesheet" href="styles/root.css">
     <link rel="stylesheet" href="styles/interaction.css">
     <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/header.css">
-<<<<<<< HEAD
+    <script defer src="scripts/theme-switcher.js"></script>
+    <script defer src="scripts/loading.js"></script>
     <style>    
+        .bookingcontent{
+            display: flex;
+            flex: auto;
+        }
         .bookhalf, .bookfull{
+            margin: 0px 50px;
             width: 40%;
             box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
         }
         .bookhalf h1, .bookhalf h2, .bookfull h1, .bookfull h2{
             padding: 0px 10px;
-=======
-    <style>
-        .container{
-            display: block;
-            width: 500px;
-            height: 200px;
-            box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-            padding: 5px;
->>>>>>> 26090003fcee66fcfe034e8545cf2c6de04ddc75
         }
+ 
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        .reviews {
+    padding: 0;
+    height: 100px;
+    width: 40%;
+    margin: auto;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;   /* horizontal */
+    align-items: center;       /* vertical */
+    text-align: center;
+}
+
+.reviews p {
+    margin: 0;   /* remove default p-tag spacing */
+    line-height: normal;
+}
+
     </style>
 </head>
 <body>
@@ -41,10 +70,31 @@
             <a href="index.html">Home</a>
             <a href="#">Books</a>
             <a href="#">Talks</a>
+
+            <img src="images/icons/theme-switch.svg" id="theme-switcher"></img>
         </div>
     </header>
-
+    <img class="hr" src="images/hr.png"></img>
+    <div id="loading">
+        <p>loading</p>
+    </div>
     <main>
+        <div class="sideimageleft">
+            <img id = "bgimg" src="images/content/thebeardybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thecattybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thedoggybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thebottlebloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thefoxyblokeandtherabbitybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/theglassybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/themaskyblokes.png" alt="The Beardy Bloke">
+        </div>
+        <div class="sideimageright">
+            <img id = "bgimg" src="images/content/theapplyblokeandthebookyblokes.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/themotheryblokeandthedaughterybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/theheartybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/theteachybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/theboatybloke.png" alt="The Beardy Bloke">
+        </div>
         <div class="difconvs">
             <h1 id = "title">Difficult Conversations</h1>
             <h2 id = "content1">- This programme is a talk for schools and groups of people aged 16+.</h2>
@@ -53,23 +103,77 @@
         </div>
         <div class="bookingcontent">
             <div class="bookhalf">
-                <h1>Book for Half a Day</h1>
-                <h2>- Two 1hr sessions in the morning</h2>
-                <h2>- 15 minutes to get settled</h2>
-                <h2>- 45 minutes for delivery</h2>
-                <h2>- Read 3 poems with experience and speech</h2>
+                <h2>Book for Half a Day</h2>
+                <p>- Two 1hr sessions in the morning</p>
+                <p>- 15 minutes to get settled</p>
+                <p>- 45 minutes for delivery</p>
+                <p>- Read 3 poems with experience and speech</p>
             </div>
             <div class="bookfull">
-                <h1>Book for a Full Day</h1>
-                <h2>- Two 1hr sessions in the morning</h2>
-                <h2>- Two 1hr sessions in the afternoon</h2>
-                <h2>- 15 minutes to get settled</h2>
-                <h2>- 45 minutes for delivery</h2>
-                <h2>- Read 3 poems with experience and speech</h2>
+                <h2>Book for a Full Day</h2>
+                <p>- Two 1hr sessions in the morning</p>
+                <p>- Two 1hr sessions in the afternoon</p>
+                <p>- 15 minutes to get settled</p>
+                <p>- 45 minutes for delivery</p>
+                <p>- Read 3 poems with experience and speech</p>
             </div>
         </div>
+        <div class="review-container">
+            <h1 id = "reviews">Reviews</h1>
+            <div class="reviews">
+                <p>Female 19+: "Well Done 10/10"</p>
+            </div>
+            <div class="reviews">
+                <p>Female 14-16: "You're really funny and I'm glad you share your feelings like this"</p>
+            </div>
+            <div class="reviews">
+                <p>Female 16: "You"</p>
+            </div>
+            <a class="prev" onclick="plus(-1)">&#10094;</a>
+            <a class="next" onclick="plus(1)">&#10095;</a>
+        </div>
+        <span class="dot" onclick="current(1)"></span>
+        <span class="dot" onclick="current(2)"></span>
+        <span class="dot" onclick="current(3)"></span>
     </main>
 </body>
 <script>
+    const imgs = document.querySelectorAll('[id = "bgimg"]')
+    for(let i = 0; i < imgs.length; i++){
+        var rotation = Math.floor(Math.random() * 60) - 30;
+        var position = Math.floor(Math.random() * 200);
+        imgs.item(i).style.transform = "translateX(" + position + "px)" + "rotate(" + rotation + "deg)"
+    }
+    
+    let index = 1;
+    review(index);
+    
+    function plus(n) {
+      review(index += n);
+    }
+    
+    function current(n) {
+      review(index = n);
+    }
+    
+    function review(n) {
+  let i;
+  let reviews = document.getElementsByClassName("reviews");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > reviews.length) { index = 1 }
+  if (n < 1) { index = reviews.length }
+
+  for (i = 0; i < reviews.length; i++) {
+    reviews[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  reviews[index - 1].style.display = "flex"; 
+  dots[index - 1].className += " active";
+}
 </script>
 </html>
