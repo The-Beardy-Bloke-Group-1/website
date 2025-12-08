@@ -26,6 +26,38 @@
         .bookhalf h1, .bookhalf h2, .bookfull h1, .bookfull h2{
             padding: 0px 10px;
         }
+ 
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        .reviews {
+    padding: 0;
+    height: 100px;
+    width: 40%;
+    margin: auto;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;   /* horizontal */
+    align-items: center;       /* vertical */
+    text-align: center;
+}
+
+.reviews p {
+    margin: 0;   /* remove default p-tag spacing */
+    line-height: normal;
+}
+
     </style>
 </head>
 <body>
@@ -71,26 +103,34 @@
         </div>
         <div class="bookingcontent">
             <div class="bookhalf">
-                <h1>Book for Half a Day</h1>
-                <h2>- Two 1hr sessions in the morning</h2>
-                <h2>- 15 minutes to get settled</h2>
-                <h2>- 45 minutes for delivery</h2>
-                <h2>- Read 3 poems with experience and speech</h2>
+                <h2>Book for Half a Day</h2>
+                <p>- Two 1hr sessions in the morning</p>
+                <p>- 15 minutes to get settled</p>
+                <p>- 45 minutes for delivery</p>
+                <p>- Read 3 poems with experience and speech</p>
             </div>
             <div class="bookfull">
-                <h1>Book for a Full Day</h1>
-                <h2>- Two 1hr sessions in the morning</h2>
-                <h2>- Two 1hr sessions in the afternoon</h2>
-                <h2>- 15 minutes to get settled</h2>
-                <h2>- 45 minutes for delivery</h2>
-                <h2>- Read 3 poems with experience and speech</h2>
+                <h2>Book for a Full Day</h2>
+                <p>- Two 1hr sessions in the morning</p>
+                <p>- Two 1hr sessions in the afternoon</p>
+                <p>- 15 minutes to get settled</p>
+                <p>- 45 minutes for delivery</p>
+                <p>- Read 3 poems with experience and speech</p>
             </div>
         </div>
-        <div class="reviews">
+        <div class="review-container">
             <h1 id = "reviews">Reviews</h1>
-            <h2>Female 19+: "Well Done 10/10"</h2>
-            <h2>Female 14-16: "You're really funny and I'm glad you share your feelings like this"</h2>
+            <div class="reviews">
+                <p>Female 19+: "Well Done 10/10"</p>
+            </div>
+            <div class="reviews">
+                <p>Female 14-16: "You're really funny and I'm glad you share your feelings like this"</p>
+            </div>
+            <a class="prev" onclick="plus(-1)">&#10094;</a>
+            <a class="next" onclick="plus(1)">&#10095;</a>
         </div>
+        <span class="dot" onclick="current(1)"></span>
+        <span class="dot" onclick="current(2)"></span>
     </main>
 </body>
 <script>
@@ -100,5 +140,36 @@
         var position = Math.floor(Math.random() * 200);
         imgs.item(i).style.transform = "translateX(" + position + "px)" + "rotate(" + rotation + "deg)"
     }
+    
+    let index = 1;
+    review(index);
+    
+    function plus(n) {
+      review(index += n);
+    }
+    
+    function current(n) {
+      review(index = n);
+    }
+    
+    function review(n) {
+  let i;
+  let reviews = document.getElementsByClassName("reviews");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > reviews.length) { index = 1 }
+  if (n < 1) { index = reviews.length }
+
+  for (i = 0; i < reviews.length; i++) {
+    reviews[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  reviews[index - 1].style.display = "flex";  // <— IMPORTANT FIX
+  dots[index - 1].className += " active";
+}
 </script>
 </html>
