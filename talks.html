@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles/conf/colours.css">
+    <link id="theme-link" rel="stylesheet" href="styles/conf/colours.css">
     <link rel="stylesheet" href="styles/conf/fonts.css">
     <link rel="stylesheet" href="styles/root.css">
     <link rel="stylesheet" href="styles/interaction.css">
     <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/header.css">
+    <script defer src="scripts/theme-switcher.js"></script>
+    <script defer src="scripts/loading.js"></script>
     <style>    
         .bookingcontent{
             display: flex;
@@ -34,10 +36,18 @@
         </div>
         <div class="nav">
             <a href="index.html">Home</a>
-            <a href="books.html">Books</a>
-            <a href="talks.html">Talks</a>
+            <a href="#">Books</a>
+            <a href="#">Talks</a>
+
+            <img src="images/icons/theme-switch.svg" id="theme-switcher"></img>
         </div>
     </header>
+
+    <img class="hr" src="images/hr.png"></img>
+
+    <div id="loading">
+        <p>loading</p>
+    </div>
 
     <main>
         <div class="difconvs">
