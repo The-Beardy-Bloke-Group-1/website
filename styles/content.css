@@ -3,3 +3,8 @@ h1 {
     font-family: var(--font-head);
     font-weight: normal;
 }
+
+.hr {
+    margin: 1em 0;
+    max-width: 100%;
+}
