@@ -42,14 +42,27 @@
             <img src="images/icons/theme-switch.svg" id="theme-switcher"></img>
         </div>
     </header>
-
     <img class="hr" src="images/hr.png"></img>
-
     <div id="loading">
         <p>loading</p>
     </div>
-
     <main>
+        <div class="sideimageleft">
+            <img id = "bgimg" src="images/content/thebeardybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thecattybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thedoggybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thebottlebloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thefoxyblokeandtherabbitybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/theglassybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/themaskyblokes.png" alt="The Beardy Bloke">
+        </div>
+        <div class="sideimageright">
+            <img id = "bgimg" src="images/content/theapplyblokeandthebookyblokes.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/themotheryblokeandthedaughterybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/theheartybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/theteachybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/theboatybloke.png" alt="The Beardy Bloke">
+        </div>
         <div class="difconvs">
             <h1 id = "title">Difficult Conversations</h1>
             <h2 id = "content1">- This programme is a talk for schools and groups of people aged 16+.</h2>
@@ -81,5 +94,11 @@
     </main>
 </body>
 <script>
+    const imgs = document.querySelectorAll('[id = "bgimg"]')
+    for(let i = 0; i < imgs.length; i++){
+        var rotation = Math.floor(Math.random() * 60) - 30;
+        var position = Math.floor(Math.random() * 200);
+        imgs.item(i).style.transform = "translateX(" + position + "px)" + "rotate(" + rotation + "deg)"
+    }
 </script>
 </html>
