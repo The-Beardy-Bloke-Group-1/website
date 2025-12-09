@@ -47,13 +47,20 @@
             width: 40%;
             margin: auto;
             box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-
             display: flex;
-            justify-content: center;   /* horizontal */
-            align-items: center;       /* vertical */
+            justify-content: center;   
+            align-items: center;       
             text-align: center;
         }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
 
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
  
 
     </style>
@@ -120,13 +127,13 @@
         </div>
         <div class="review-container">
             <h1 id = "reviews">Reviews</h1>
-            <div class="reviews">
+            <div class="reviews fade">
                 <p>Female 19+: "Well Done 10/10"</p>
             </div>
-            <div class="reviews">
+            <div class="reviews fade">
                 <p>Female 14-16: "You're really funny and I'm glad you share your feelings like this"</p>
             </div>
-            <div class="reviews">
+            <div class="reviews fade">
                 <p>Female 16: "You"</p>
             </div>
         </div>
@@ -166,33 +173,32 @@
     
     let index = 1;
     review(index);
-    
-    function plus(n) {
-      review(index += n);
-    }
-    
+
     function current(n) {
-      review(index = n);
+        review(index = n,false);
     }
-    
-    function review(n) {
-    let i;
-    let reviews = document.getElementsByClassName("reviews");
-    let dots = document.getElementsByClassName("dot");
+    function review(n,auto=true) {
+        let i;
+        let reviews = document.getElementsByClassName("reviews");
+        let dots = document.getElementsByClassName("dot");
 
-    if (n > reviews.length) { index = 1 }
-    if (n < 1) { index = reviews.length }
+        if (n > reviews.length) { index = 1 }
+        if (n < 1) { index = reviews.length }
 
-    for (i = 0; i < reviews.length; i++) {
-        reviews[i].style.display = "none";
-    }
+        for (i = 0; i < reviews.length; i++) {
+            reviews[i].style.display = "none";
+        }
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+        }
 
-    reviews[index - 1].style.display = "flex"; 
-    dots[index - 1].className += " active";
+        reviews[index - 1].style.display = "flex";
+        dots[index - 1].classList.add("active");
+
+        index++;
+
+        if (auto==true){setTimeout(() => review(index), 2000);}
     }
 </script>
 </html>
