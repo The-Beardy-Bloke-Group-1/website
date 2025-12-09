@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/interaction.css">
     <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <script defer src="scripts/theme-switcher.js"></script>
     <script defer src="scripts/loading.js"></script>
     <style>    
@@ -41,22 +42,19 @@
             background-color: #717171;
         }
         .reviews {
-    padding: 0;
-    height: 100px;
-    width: 40%;
-    margin: auto;
-    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+            padding: 0;
+            height: 100px;
+            width: 40%;
+            margin: auto;
+            box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 
-    display: flex;
-    justify-content: center;   /* horizontal */
-    align-items: center;       /* vertical */
-    text-align: center;
-}
+            display: flex;
+            justify-content: center;   /* horizontal */
+            align-items: center;       /* vertical */
+            text-align: center;
+        }
 
-.reviews p {
-    margin: 0;   /* remove default p-tag spacing */
-    line-height: normal;
-}
+ 
 
     </style>
 </head>
@@ -131,12 +129,31 @@
             <div class="reviews">
                 <p>Female 16: "You"</p>
             </div>
-            <a class="prev" onclick="plus(-1)">&#10094;</a>
-            <a class="next" onclick="plus(1)">&#10095;</a>
         </div>
-        <span class="dot" onclick="current(1)"></span>
-        <span class="dot" onclick="current(2)"></span>
-        <span class="dot" onclick="current(3)"></span>
+        <div class="dot-container" style="display: flex; justify-content: center; margin-top: 10px;">
+            <span class="dot" onclick="current(1)"></span>
+            <span class="dot" onclick="current(2)"></span>
+            <span class="dot" onclick="current(3)"></span>
+        </div>
+        <footer>
+            <img style="transform: angle(180deg)" class="hr" src="images/hr.png"></img>
+            
+            <div class="socials">
+                <a href="https://www.instagram.com/thebeardybloke110">
+                    <img src="images/icons/logos/instagram.svg"></img>
+                </a>
+    
+                <a href="https://www.instagram.com/thebeardybloke110">
+                    <img src="images/icons/logos/instagram.svg"></img>
+                </a>
+    
+                <a href="https://www.instagram.com/thebeardybloke110">
+                    <img src="images/icons/logos/instagram.svg"></img>
+                </a>
+            </div>
+    
+            <p>© Mark Webb, 2025</p>
+        </footer>
     </main>
 </body>
 <script>
@@ -159,23 +176,23 @@
     }
     
     function review(n) {
-  let i;
-  let reviews = document.getElementsByClassName("reviews");
-  let dots = document.getElementsByClassName("dot");
+    let i;
+    let reviews = document.getElementsByClassName("reviews");
+    let dots = document.getElementsByClassName("dot");
 
-  if (n > reviews.length) { index = 1 }
-  if (n < 1) { index = reviews.length }
+    if (n > reviews.length) { index = 1 }
+    if (n < 1) { index = reviews.length }
 
-  for (i = 0; i < reviews.length; i++) {
-    reviews[i].style.display = "none";
-  }
+    for (i = 0; i < reviews.length; i++) {
+        reviews[i].style.display = "none";
+    }
 
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
 
-  reviews[index - 1].style.display = "flex"; 
-  dots[index - 1].className += " active";
-}
+    reviews[index - 1].style.display = "flex"; 
+    dots[index - 1].className += " active";
+    }
 </script>
 </html>
