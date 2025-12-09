@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <script defer src="scripts/theme-switcher.js"></script>
-    <script defer src="scripts/loading.js"></script>
+
     <style>    
         .bookingcontent{
             display: flex;
@@ -66,6 +66,15 @@
     </style>
 </head>
 <body>
+    <div id="loading" style="font-family: Verdana;" hide>
+        <p>loading...</p>
+    </div>
+
+    <script src="scripts/loading.js"></script>
+
+    <a id="access-button" href="access.html">
+        <img src="images/icons/access.svg"></img>
+    </a>
     <header>
         <div class="branding">
             <img id="logo" src="images/branding/logo-wh.png"></img>
@@ -80,9 +89,6 @@
         </div>
     </header>
     <img class="hr" src="images/hr.png"></img>
-    <div id="loading">
-        <p>loading</p>
-    </div>
     <main>
         <div class="sideimageleft">
             <img id = "bgimg" src="images/content/thebeardybloke.png" alt="The Beardy Bloke">
@@ -103,10 +109,10 @@
             <img id = "bgimg" src="images/content/thefatheryblokeandthedaughterybloke.png" alt="The Fathery Bloke and the Daughtery Bloke">
         </div>
         <div class="difconvs">
-            <h1 id = "title">Difficult Conversations</h1>
-            <h2 id = "content1">- This programme is a talk for schools and groups of people aged 16+.</h2>
-            <h2 id = "content2">- The programme talks about deep topics such as mental health, violence etc.</h2>
-            <h2 id = "content3">- The programme contains live poetry readings that provoke thought and discussion.</h2>
+            <h1>Difficult Conversations</h1>
+            <h2>- This programme is a talk for schools and groups of people aged 16+.</h2>
+            <h2>- The programme talks about deep topics such as mental health, violence etc.</h2>
+            <h2>- The programme contains live poetry readings that provoke thought and discussion.</h2>
         </div>
         <div class="bookingcontent">
             <div class="bookhalf">
@@ -198,7 +204,7 @@
 
         index++;
 
-        if (auto==true){setTimeout(() => review(index), 2000);}
+        if (auto==true){setTimeout(() => review(index), 5000);}
     }
 </script>
 </html>
