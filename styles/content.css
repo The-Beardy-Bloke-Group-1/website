@@ -187,3 +187,45 @@ h2 {
 .line-art {
     filter: invert(var(--brightness)) brightness(0.85);
 }
+
+.pricing-container {
+    display: flex;
+    gap: 1em;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.pricing-option {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary);
+    color: var(--bg-primary);
+
+    padding: 1em;
+    height: auto;
+    width: 100%;
+}
+
+.pricing-option a {
+    margin-top: auto;
+}
+
+.pricing-option li {
+    width: auto;
+}
+
+.pricing-option .content {
+    height: 100%;
+}
+
+.pricing-option h1 {
+    color: var(--bg-primary);
+    font-family: var(--font-regular);
+    margin-bottom: 0;
+}
+
+.pricing-option h2 {
+    color: var(--bg-primary);
+    font-size: 1em;
+    margin: 0;
+}
