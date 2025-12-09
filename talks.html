@@ -126,11 +126,15 @@
             <div class="reviews">
                 <p>Female 14-16: "You're really funny and I'm glad you share your feelings like this"</p>
             </div>
+            <div class="reviews">
+                <p>Female 16: "You"</p>
+            </div>
             <a class="prev" onclick="plus(-1)">&#10094;</a>
             <a class="next" onclick="plus(1)">&#10095;</a>
         </div>
         <span class="dot" onclick="current(1)"></span>
         <span class="dot" onclick="current(2)"></span>
+        <span class="dot" onclick="current(3)"></span>
     </main>
 </body>
 <script>
@@ -168,7 +172,7 @@
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  reviews[index - 1].style.display = "flex";  // <— IMPORTANT FIX
+  reviews[index - 1].style.display = "flex"; 
   dots[index - 1].className += " active";
 }
 </script>

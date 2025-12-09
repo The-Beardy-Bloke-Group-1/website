@@ -32,6 +32,7 @@ h2 {
     align-items: center;
 
     pointer-events: none;
+    z-index: 100;
 }
 
 #loading[hide] {
@@ -42,6 +43,9 @@ h2 {
 /* Image Text Group */
 .image-text-group {
     display: flex;
+    min-width: 0;
+
+    flex-wrap: wrap;
     width: 100%;
     max-width: 750px;
     gap: 2em;
@@ -58,5 +62,29 @@ h2 {
 
 .image-text-group .text {
     width: 100%;
+    min-width: 310px;
     text-align: start;
+    
+    flex: 1;
+}
+
+.splash {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.splash img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.splash .text {
+
 }

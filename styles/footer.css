@@ -1,0 +1,36 @@
+footer {
+    width: 100%;
+    margin-top: auto;
+
+    text-align: center;
+}
+
+footer .socials {
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+footer .socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--tertiary);
+    padding: 10px;
+    border-radius: 100%;
+
+    transition: all 0.2s;
+}
+
+footer .socials a img {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+
+footer .socials a:hover {
+    transform: rotate(45deg);
+    background-color: rgba(0, 0, 0, 0.75);
+}

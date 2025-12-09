@@ -16,6 +16,9 @@ html, body {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+
     max-width: var(--body-width);
     margin: 0;
     margin-right: auto;
@@ -24,7 +27,7 @@ body {
 
     box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* header, main {

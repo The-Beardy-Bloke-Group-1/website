@@ -1,6 +1,7 @@
 header {
     /* width: 100%; */
     display: flex;
+    /* gap: 1em; */
     padding-top: 2em;
 }
 
@@ -8,18 +9,21 @@ header .branding {
     display: flex;
     align-items: center;
     gap: 1em;
-    width: 100%;
+    /* width: 100%; */
 }
 
 header .nav {
     display: flex;
     gap: 2em;
+    float: right;
     align-items: center;
     justify-content: end;
 
+    margin-left: auto;
+
     padding: 0 1em;
 
-    width: 100%;
+    /* width: 100%; */
 }
 
 header .nav a {
