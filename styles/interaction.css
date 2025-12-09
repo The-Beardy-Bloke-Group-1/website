@@ -3,4 +3,19 @@ a {
     /* text-decoration: none; */
     /* font-weight: bold; */
     text-underline-offset: 2px;
+    border-bottom: 2px var(--bg-primary) dashed;
+
+    transition: all 0.2s;
+}
+
+a:hover {
+    /* text-decoration: underline !important; */
+    border-bottom: 2px var(--secondary) dashed;
+
+    filter: brightness(1.5);
+}
+
+a:active {
+    filter: brightness(0.75);
+    border-bottom: 2px var(--secondary) solid;
 }
