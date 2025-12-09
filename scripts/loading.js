@@ -1,11 +1,15 @@
 const loading = document.querySelector("#loading")
+let loaded = false
 
 loading.removeAttribute("hide")
 
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        loading.setAttribute("hide", "")
-    }, 2);
+setTimeout(() => {
+    if ( !loaded ) {
+        loading.style.color = "white"
+    }
+}, 1000);
 
-    
+window.addEventListener('load', () => {
+    loaded = true
+    loading.setAttribute("hide", "")
 })

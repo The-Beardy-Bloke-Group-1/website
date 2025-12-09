@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <link id="theme-link" rel="stylesheet" href="styles/conf/colours.css">
-    <link rel="stylesheet" href="styles/conf/fonts-dyslexia.css">
+    <link id="font-link" rel="stylesheet" href="styles/conf/fonts.css">
     <link rel="stylesheet" href="styles/root.css">
     <link rel="stylesheet" href="styles/interaction.css">
     <link rel="stylesheet" href="styles/content.css">
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
 
+    <script defer src="scripts/settings.js"></script>
+    <script defer src="scripts/font-switcher.js"></script>
     <script defer src="scripts/theme-switcher.js"></script>
     <script defer src="scripts/accessibility.js"></script>
 </head>
@@ -59,11 +61,15 @@
         <div class="link-list">
             <ul id="theme-list">
                 <li><p>Theme</p></li>
-                <!-- <li><a>Light</a></li>
-                <li><a>Dark</a></li>
-                <li><a>High Contrast</a></li> -->
             </ul>
         </div>
+
+        <div class="link-list">
+            <ul id="font-list">
+                <li><p>Font</p></li>
+            </ul>
+        </div>
+        
         
     </main>
 

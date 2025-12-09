@@ -19,20 +19,6 @@ function set_theme(name) {
 
     const newFile = `styles/conf/colours${name}.css`
     link.href = newFile
-
-    console.log(newFile)
-}
-
-function get_setting(key) {
-    return localStorage.getItem(key)
-}
-
-function set_setting(key, value) {
-    if ( value == null ) {
-        localStorage.removeItem(key)
-    } else {
-        localStorage.setItem(key, value)
-    }
 }
 
 function change_theme(name) {
@@ -53,6 +39,8 @@ document.querySelector('#theme-switcher').addEventListener('click', () => {
     // set_theme(get_setting('theme'))
 })
 
-window.addEventListener('load', () => {
-    set_theme(get_setting('theme'))
-})
+set_theme(get_setting('theme'))
+
+// window.addEventListener('load', () => {
+    
+// })
