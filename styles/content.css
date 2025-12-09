@@ -6,7 +6,7 @@ h1 {
 
 h2 {
     color: var(--primary);
-    font-weight: normal;
+    /* font-weight: normal; */
 }
 
 .hr {
@@ -182,4 +182,8 @@ h2 {
     float: left;
     /* padding-left: 1em; */
     padding-right: 1em;
+}
+
+.line-art {
+    filter: invert(var(--brightness)) brightness(0.85);
 }

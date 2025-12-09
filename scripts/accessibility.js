@@ -1,12 +1,13 @@
 const themes = {
-    '': 'Dark',
+    '': 'Dark (Default)',
     'light': "Light",
     'contrast': "High Contrast"
 }
 
 const fonts = {
-    '': 'Regular',
-    'dyslexia': "Dyslexic"
+    '': 'Default',
+    'dyslexia': "Dyslexic",
+    'roboto': "Simple"
 }
 
 const theme_list = document.querySelector("#theme-list")
