@@ -31,6 +31,8 @@ h2 {
     justify-content: center;
     align-items: center;
     z-index: 100;
+
+    overflow: auto;
 }
 
 #loading[hide] {
@@ -113,4 +115,39 @@ h2 {
 
 .splash .text h1 {
     color: white;
+}
+
+.quote {
+    font-size: 1.25em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+#access-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 2em;
+    padding: 10px;
+    background-color: var(--tertiary);
+    border-radius: 100%;
+
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+    border: none;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+    filter: none;
+}
+
+#access-button:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#access-button img {
+    width: 25px;
+    height: 25px;
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --body-width: 55%;
+    --body-width: 1024px;
 }
 
 html, body {
@@ -29,13 +29,6 @@ body {
 
     min-height: 100vh;
 }
-
-/* header, main {
-    max-width: var(--body-width);
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 2em;
-} */
 
 main {
     margin-top: 2em;
