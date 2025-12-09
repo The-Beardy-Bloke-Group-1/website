@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --body-width: 1024px;
+    --body-width: 55%;
 }
 
 html, body {
@@ -45,16 +45,16 @@ main {
     position: fixed;
     left: 0;
     top: 0;
-    width: 120px;
+    width: 12.5%;
 }
 .sideimageright{
     position: fixed;
-    right: -100px;
+    right: 0;
     top: 0;
-    width: 120px;
+    width: 12.5%;
 }
 .sideimageleft img, .sideimageright img{
     display: block;
-    width: 80%;
+    width: 40%;
     padding: 15px;
 }
