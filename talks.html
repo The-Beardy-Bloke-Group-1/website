@@ -92,6 +92,8 @@
             <img id = "bgimg" src="images/content/theheartybloke.png" alt="The Beardy Bloke">
             <img id = "bgimg" src="images/content/theteachybloke.png" alt="The Beardy Bloke">
             <img id = "bgimg" src="images/content/theboatybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thetoilettybloke.png" alt="The Beardy Bloke">
+            <img id = "bgimg" src="images/content/thefatheryblokeandthedaughterybloke.png" alt="The Beardy Bloke">
         </div>
         <div class="difconvs">
             <h1 id = "title">Difficult Conversations</h1>
@@ -158,8 +160,8 @@
     const imgs = document.querySelectorAll('[id = "bgimg"]')
     for(let i = 0; i < imgs.length; i++){
         var rotation = Math.floor(Math.random() * 60) - 30;
-        var position = Math.floor(Math.random() * 200);
-        imgs.item(i).style.transform = "translateX(" + position + "px)" + "rotate(" + rotation + "deg)"
+        var position = Math.floor(Math.random() * 100);
+        imgs.item(i).style.transform = "translateX(" + position + "%)" + "rotate(" + rotation + "deg)"
     }
     
     let index = 1;
