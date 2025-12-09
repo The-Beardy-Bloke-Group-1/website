@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <script defer src="scripts/theme-switcher.js"></script>
-    <script defer src="scripts/loading.js"></script>
+
     <style>    
         .bookingcontent{
             display: flex;
@@ -47,18 +47,34 @@
             width: 40%;
             margin: auto;
             box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-
             display: flex;
-            justify-content: center;   /* horizontal */
-            align-items: center;       /* vertical */
+            justify-content: center;   
+            align-items: center;       
             text-align: center;
         }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
 
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
  
 
     </style>
 </head>
 <body>
+    <div id="loading" style="font-family: Verdana;" hide>
+        <p>loading...</p>
+    </div>
+
+    <script src="scripts/loading.js"></script>
+
+    <a id="access-button" href="access.html">
+        <img src="images/icons/access.svg"></img>
+    </a>
     <header>
         <div class="branding">
             <img id="logo" src="images/branding/logo-wh.png"></img>
@@ -73,9 +89,6 @@
         </div>
     </header>
     <img class="hr" src="images/hr.png"></img>
-    <div id="loading">
-        <p>loading</p>
-    </div>
     <main>
         <div class="sideimageleft">
             <img id = "bgimg" src="images/content/thebeardybloke.png" alt="The Beardy Bloke">
@@ -96,10 +109,10 @@
             <img id = "bgimg" src="images/content/thefatheryblokeandthedaughterybloke.png" alt="The Fathery Bloke and the Daughtery Bloke">
         </div>
         <div class="difconvs">
-            <h1 id = "title">Difficult Conversations</h1>
-            <h2 id = "content1">- This programme is a talk for schools and groups of people aged 16+.</h2>
-            <h2 id = "content2">- The programme talks about deep topics such as mental health, violence etc.</h2>
-            <h2 id = "content3">- The programme contains live poetry readings that provoke thought and discussion.</h2>
+            <h1>Difficult Conversations</h1>
+            <h2>- This programme is a talk for schools and groups of people aged 16+.</h2>
+            <h2>- The programme talks about deep topics such as mental health, violence etc.</h2>
+            <h2>- The programme contains live poetry readings that provoke thought and discussion.</h2>
         </div>
         <div class="bookingcontent">
             <div class="bookhalf">
@@ -120,13 +133,13 @@
         </div>
         <div class="review-container">
             <h1 id = "reviews">Reviews</h1>
-            <div class="reviews">
+            <div class="reviews fade">
                 <p>Female 19+: "Well Done 10/10"</p>
             </div>
-            <div class="reviews">
+            <div class="reviews fade">
                 <p>Female 14-16: "You're really funny and I'm glad you share your feelings like this"</p>
             </div>
-            <div class="reviews">
+            <div class="reviews fade">
                 <p>Female 16: "You"</p>
             </div>
         </div>
@@ -166,33 +179,32 @@
     
     let index = 1;
     review(index);
-    
-    function plus(n) {
-      review(index += n);
-    }
-    
+
     function current(n) {
-      review(index = n);
+        review(index = n,false);
     }
-    
-    function review(n) {
-    let i;
-    let reviews = document.getElementsByClassName("reviews");
-    let dots = document.getElementsByClassName("dot");
+    function review(n,auto=true) {
+        let i;
+        let reviews = document.getElementsByClassName("reviews");
+        let dots = document.getElementsByClassName("dot");
 
-    if (n > reviews.length) { index = 1 }
-    if (n < 1) { index = reviews.length }
+        if (n > reviews.length) { index = 1 }
+        if (n < 1) { index = reviews.length }
 
-    for (i = 0; i < reviews.length; i++) {
-        reviews[i].style.display = "none";
-    }
+        for (i = 0; i < reviews.length; i++) {
+            reviews[i].style.display = "none";
+        }
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+        }
 
-    reviews[index - 1].style.display = "flex"; 
-    dots[index - 1].className += " active";
+        reviews[index - 1].style.display = "flex";
+        dots[index - 1].classList.add("active");
+
+        index++;
+
+        if (auto==true){setTimeout(() => review(index), 5000);}
     }
 </script>
 </html>
