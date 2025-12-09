@@ -8,6 +8,7 @@ footer {
 footer .signature {
     margin: 1em 0;
     filter: brightness(var(--brightness));
+    max-height: 100px;
     object-fit: fill;
 }
 
