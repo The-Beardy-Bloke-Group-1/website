@@ -21,3 +21,21 @@ a:active {
     filter: brightness(0.75);
     border-bottom: 2px var(--secondary) solid;
 }
+
+.button {
+    margin-top: 1em;
+    padding: 10px;
+    background-color: var(--tertiary);
+
+    color: var(--text-light);
+
+    border: none;
+    border-bottom: 1px dashed var(--text-light);
+}
+
+.button:hover {
+    border: inherit;
+    filter: none;
+    background-color: var(--tertiary-2);
+    border-bottom: 1px dashed var(--tertiary-2);
+}
