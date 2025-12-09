@@ -20,6 +20,7 @@ footer .socials a {
     background-color: var(--tertiary);
     padding: 10px;
     border-radius: 100%;
+    border: 0;
 
     transition: all 0.2s;
 }
@@ -28,6 +29,7 @@ footer .socials a img {
     width: 25px;
     height: 25px;
     filter: invert(1);
+    
 }
 
 footer .socials a:hover {
