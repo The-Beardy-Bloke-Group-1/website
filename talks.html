@@ -180,10 +180,15 @@
     </main>
 </body>
 <script>
+    const path = 'images/content/'
+    const files = ['thebeardybloke.png', 'thecattybloke.png', 'thedoggybloke.png', 'thebottlebloke.png', 'thefoxyblokeandtherabbitybloke.png', 'theapplyblokeandthebookyblokes.png', 'theboatybloke.png', 'thefatheryblokeandthedaughterybloke.png', 'theglassybloke.png', 'theheartybloke.png', 'themaskyblokes.png', 'themotheryblokeandthedaughterybloke.png', 'theteachybloke.png', 'thetoilettybloke.png',]
     const imgs = document.querySelectorAll('[id = "bgimg"]')
     for(let i = 0; i < imgs.length; i++){
+        j = Math.floor(Math.random()*files.length);
+        var url = (path + files[j]);
         var rotation = Math.floor(Math.random() * 60) - 30;
         var position = Math.floor(Math.random() * 100);
+        imgs.item(i).src = url;
         imgs.item(i).style.transform = "translateX(" + position + "%)" + "rotate(" + rotation + "deg)"
     }
     
