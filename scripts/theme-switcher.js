@@ -35,16 +35,22 @@ function set_setting(key, value) {
     }
 }
 
+function change_theme(name) {
+    set_setting('theme', name)
+
+    set_theme(name)
+}
+
 document.querySelector('#theme-switcher').addEventListener('click', () => {
     const current = get_setting('theme')
 
     if ( current ) {
-        set_setting('theme')
+        change_theme()
     } else {
-        set_setting('theme', 'light')
+        change_theme('light')
     }
 
-    set_theme(get_setting('theme'))
+    // set_theme(get_setting('theme'))
 })
 
 window.addEventListener('load', () => {

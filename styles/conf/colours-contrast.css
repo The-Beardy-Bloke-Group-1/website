@@ -1,0 +1,11 @@
+:root {
+    --primary: #00f7ff;
+    --secondary: #2bff00;
+    --tertiary: #ea00ff;
+
+    --text: #ffffff;
+
+    --bg-primary: #000000;
+    
+    --brightness: 1;
+}

@@ -31,6 +31,8 @@ h2 {
     justify-content: center;
     align-items: center;
     z-index: 100;
+
+    overflow: auto;
 }
 
 #loading[hide] {
@@ -46,7 +48,7 @@ h2 {
 
     flex-wrap: wrap;
     width: 100%;
-    max-width: 750px;
+    /* max-width: 750px; */
     gap: 2em;
 
     justify-content: center;
@@ -113,4 +115,64 @@ h2 {
 
 .splash .text h1 {
     color: white;
+}
+
+.quote {
+    font-size: 1.25em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+#access-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 2em;
+    padding: 10px;
+    background-color: var(--tertiary);
+    border-radius: 100%;
+
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+    border: none;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+    filter: none;
+
+    z-index: 10;
+}
+
+#access-button:hover {
+    background-color: rgba(100, 100, 100, 1);
+}
+
+#access-button img {
+    width: 25px;
+    height: 25px;
+}
+
+.link-list {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.link-list p {
+    margin: 0;
+    margin-right: 1em;
+}
+
+.link-list ul {
+   margin: 0;
+   list-style: none;
+   padding: 0;
+}
+
+.link-list ul li {
+    float: left;
+    /* padding-left: 1em; */
+    padding-right: 1em;
 }
