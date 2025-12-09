@@ -5,6 +5,12 @@ footer {
     text-align: center;
 }
 
+footer .signature {
+    margin: 1em 0;
+    filter: brightness(var(--brightness));
+    object-fit: fill;
+}
+
 footer .socials {
     margin-top: 1em;
     display: flex;
@@ -35,5 +41,7 @@ footer .socials a img {
 
 footer .socials a:hover {
     transform: rotate(45deg);
-    background-color: rgba(0, 0, 0, 0.75);
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    background-color: var(--tertiary-2);
+
 }
