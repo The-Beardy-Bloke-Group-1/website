@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <script defer src="scripts/settings.js"></script>
     <script defer src="scripts/theme-switcher.js"></script>
+    <script defer src="scripts/font-switcher.js"></script>
 
     <style>    
         .bookingcontent{
             display: flex;
-            flex: auto;
+            gap: 50px;
+            justify-content: center;
         }
         .bookhalf, .bookfull{
-            margin: 0px 50px;
             width: 40%;
             box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
         }
@@ -44,7 +46,7 @@
         .reviews {
             padding: 0;
             height: 100px;
-            width: 40%;
+            width: 80%;
             margin: auto;
             box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
             display: flex;
@@ -60,6 +62,14 @@
         @keyframes fade {
             from {opacity: .4} 
             to {opacity: 1}
+        }
+        @media only screen and (max-width: 650px) {
+            .bookingcontent{
+                display: block;
+            }
+            .bookhalf, .bookfull{
+                width: 100%;
+            }
         }
  
 
