@@ -1,11 +1,12 @@
 const loading = document.querySelector("#loading")
+const loading_text = loading.querySelector("p")
 let loaded = false
 
 loading.removeAttribute("hide")
 
 setTimeout(() => {
     if ( !loaded ) {
-        loading.style.color = "white"
+        loading_text.style.opacity = "0"
     }
 }, 1000);
 
