@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link id="theme-link" rel="stylesheet" href="styles/conf/colours.css">
+    <link rel="stylesheet" href="styles/conf/fonts-dyslexia.css">
+    <link rel="stylesheet" href="styles/root.css">
+    <link rel="stylesheet" href="styles/interaction.css">
+    <link rel="stylesheet" href="styles/content.css">
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <script defer src="scripts/theme-switcher.js"></script>
+    <script defer src="scripts/accessibility.js"></script>
+</head>
+<body>
+    <div id="loading" style="font-family: Verdana;" hide>
+        <p>loading...</p>
+    </div>
+
+    <script src="scripts/loading.js"></script>
+
+    <a id="access-button" href="access.html">
+        <img src="images/icons/access.svg"></img>
+    </a>
+
+    
+    <!-- Page Content -->
+    <header>
+        <div class="branding">
+            <img id="logo" src="images/branding/logo-wh.png"></img>
+            <p id="name">The Beardy Bloke</p>
+        </div>
+
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="talks.html">Talks</a>
+
+            <img src="images/icons/theme-switch.svg" id="theme-switcher"></img>
+        </div>
+
+    </header>
+
+    <img class="hr" src="images/hr.png"></img>
+
+    <main>
+        <script>
+            document.write('<a href="' + document.referrer + '">Return to what you were doing</a>');
+        </script>
+
+        <h1>Accessibility Settings</h1>
+        <h2>Appearance</h2>
+        <div class="link-list">
+            <ul id="theme-list">
+                <li><p>Theme</p></li>
+                <!-- <li><a>Light</a></li>
+                <li><a>Dark</a></li>
+                <li><a>High Contrast</a></li> -->
+            </ul>
+        </div>
+        
+    </main>
+
+    <footer>
+        <img style="transform: angle(180deg)" class="hr" src="images/hr.png"></img>
+        
+        <div class="socials">
+            <a href="https://www.instagram.com/thebeardybloke110">
+                <img src="images/icons/logos/instagram.svg"></img>
+            </a>
+
+            <a href="https://www.instagram.com/thebeardybloke110">
+                <img src="images/icons/logos/instagram.svg"></img>
+            </a>
+
+            <a href="https://www.instagram.com/thebeardybloke110">
+                <img src="images/icons/logos/instagram.svg"></img>
+            </a>
+        </div>
+
+        <p>© Mark Webb, 2025</p>
+    </footer>
+</body>
+<script>
+</script>
+</html>

@@ -1,0 +1,18 @@
+:root {
+    --font-head: "Open-Dyslexic";
+    --font-default: "Open-Dyslexic"
+}
+
+@font-face {
+    font-family: 'Open-Dyslexic';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open-Dyslexic'), url('https://fonts.cdnfonts.com/s/29616/open-dyslexic.woff') format('woff');
+}
+
+* {
+    /* font-size:20px; */
+    /* line-height:200%; */
+    /* color: #191A42; */
+    /* font-family:Open-Dyslexic !important; */
+}
