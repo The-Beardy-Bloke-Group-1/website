@@ -12,8 +12,13 @@ setTimeout(() => {
 
 window.addEventListener('load', () => {
     loaded = true
+    loading.setAttribute("hide", "")
     setTimeout(() => {
         loading.setAttribute("hide", "")
+        
+        setTimeout(() => {
+            document.querySelector(".body").style.opacity = 1
+        }, 250)
     }, 250)
 })
 

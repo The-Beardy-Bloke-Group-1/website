@@ -73,25 +73,20 @@
     </div>
 
     <script src="scripts/loading.js"></script>
+    
+    <div class="page-container">
+        <!-- Page Content -->
+        <div class="body" style="opacity: 0;">
+            <a id="access-button" href="access.html">
+                <img src="images/icons/access.svg"></img>
+            </a>
+            
+            <script src="scripts/include.js" data-inc="header.html"></script>
 
-    <a id="access-button" href="access.html">
-        <img src="images/icons/access.svg"></img>
-    </a>
-    <header>
-        <div class="branding">
-            <img id="logo" src="images/branding/logo-wh.png"></img>
-            <p id="name">The Beardy Bloke</p>
-        </div>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="books.html">Books</a>
-            <a href="talks.html">Talks</a>
+            <img class="hr" src="images/hr.png"></img>
 
-            <img src="images/icons/theme-switch.svg" id="theme-switcher"></img>
-        </div>
-    </header>
-    <img class="hr" src="images/hr.png"></img>
-    <main>
+            <!-- MAIN -->
+            <main>
         <!-- <div class="sideimageleft">
             <img id = "bgimg" src="#" alt="Drawing">
             <img id = "bgimg" src="#" alt="Drawing">
@@ -151,105 +146,88 @@
             <span class="dot" onclick="current(3)"></span>
         </div> -->
 
-        <h1>Difficult Conversations</h1>
-        <p>
-            I offer a half or full-day programme called "Difficult Conversations", which includes live poetry readings that provoke thought and discussion.
-        </p>
+            <h1>Difficult Conversations</h1>
+            <p>
+                I offer a half or full-day programme called "Difficult Conversations", which includes live poetry readings that provoke thought and discussion.
+            </p>
 
-        <div class="image-text-group">
-            <img class="line-art image" src="images/content/art/teacher.png"></img>
-            <div class="text">
-                <h2>Who is this for?</h2>
-                <p>
-                    This programme is mainly tailored for school students, aged 16 and over and buisinesses, who are experiencing issues with sexism, violence or discrimination.
-                </p>
-            </div>
-        </div>
-
-        <div class="image-text-group">
-            <div class="text">
-                <h2>What's it about?</h2>
-                <p>
-                    I will discuss societal issues, such as racism, misogyny, violence and forms of discrimination that are present in our society.
-                </p>
-            </div>
-
-            <img class="line-art image" src="images/content/art/book.png"></img>
-        </div>
-
-        <div class="image-text-group">
-            <img class="line-art image" src="images/content/art/heart.png"></img>
-
-            <div class="text">
-                <h2>Praise for Mark Webb</h2>
-                <p class="quote">"Really amazing"</p>
-                <p class="quote">"Meaningful and thoughtful"</p>
-                <p class="quote">"I think you should be a comedian"</p>
-                <p class="quote">"Had my attention for the whole session"</p>
-                <p class="quote">"Your poems are amazing"</p>
-                <p class="quote">"Inspiring"</p>
-                <p class="quote">"I really needed this"</p>
-                
-            </div>
-        </div>
-
-        <h2>Pricing</h2>
-        <div class="pricing-container">
-            <div class="pricing-option">
-                <div class="content">
-                    <h1 id="name">Single Session</h1>
-                    <h2>for one hour</h2>
-    
-                    <p>Book a singular session for one hour.</p>
-                    <p>Each session will contain:</p>
-                    <ul>
-                        <li>a 15 minute introduction,</li>
-                        <li>45 minutes for three poems, which will each include a firsthand experience and speech.</li>
-                    </ul>
+            <div class="image-text-group">
+                <img class="line-art image" src="images/content/art/teacher.png"></img>
+                <div class="text">
+                    <h2>Who is this for?</h2>
+                    <p>
+                        This programme is mainly tailored for school students, aged 16 and over and buisinesses, who are experiencing issues with sexism, violence or discrimination.
+                    </p>
                 </div>
-                <p>
-                    <a class="button" href="home.html">Book from £150</a>
-                </p>
             </div>
 
-            <div class="pricing-option">
-                <div class="content">
-                    <h1 id="name">Four Sessions</h1>
-                    <h2>for four hours (an entire day)</h2>
-                    <p><b>Save £100</b> and book four hour-long sessions for the entire day.</p>
+            <div class="image-text-group">
+                <div class="text">
+                    <h2>What's it about?</h2>
+                    <p>
+                        I will discuss societal issues, such as racism, misogyny, violence and forms of discrimination that are present in our society.
+                    </p>
                 </div>
 
-                <br>
-                <p>
-                    <a class="button" href="home.html">Book from £500</a>
-                </p>
+                <img class="line-art image" src="images/content/art/book.png"></img>
             </div>
-        </div>
 
-        <br>
-        <p>Need more options? <a href="index.html">Let's chat!</a></p>
+            <div class="image-text-group">
+                <img class="line-art image" src="images/content/art/heart.png"></img>
+
+                <div class="text">
+                    <h2>Praise for Mark Webb</h2>
+                    <p class="quote">"Really amazing"</p>
+                    <p class="quote">"Meaningful and thoughtful"</p>
+                    <p class="quote">"I think you should be a comedian"</p>
+                    <p class="quote">"Had my attention for the whole session"</p>
+                    <p class="quote">"Your poems are amazing"</p>
+                    <p class="quote">"Inspiring"</p>
+                    <p class="quote">"I really needed this"</p>
+                    
+                </div>
+            </div>
+
+            <h2>Pricing</h2>
+            <div class="pricing-container">
+                <div class="pricing-option">
+                    <div class="content">
+                        <h1 id="name">Single Session</h1>
+                        <h2>for one hour</h2>
         
-    </main>
-    
-        <footer>
-            <img style="transform: angle(180deg)" class="hr" src="images/hr.png"></img>
-            <img class="signature" src="images/content/signature.png"></img>
-            <div class="socials">
-                <a href="https://www.instagram.com/thebeardybloke110">
-                    <img src="images/icons/logos/instagram.svg"></img>
-                </a>
-    
-                <a href="https://www.instagram.com/thebeardybloke110">
-                    <img src="images/icons/logos/instagram.svg"></img>
-                </a>
-    
-                <a href="https://www.instagram.com/thebeardybloke110">
-                    <img src="images/icons/logos/instagram.svg"></img>
-                </a>
-            </div>  
-            <p>© Mark Webb, 2025</p>
-        </footer>
-    </main>
+                        <p>Book a singular session for one hour.</p>
+                        <p>Each session will contain:</p>
+                        <ul>
+                            <li>a 15 minute introduction,</li>
+                            <li>45 minutes for three poems, which will each include a firsthand experience and speech.</li>
+                        </ul>
+                    </div>
+                    <p>
+                        <a class="button" href="home.html">Book from £150</a>
+                    </p>
+                </div>
+
+                <div class="pricing-option">
+                    <div class="content">
+                        <h1 id="name">Four Sessions</h1>
+                        <h2>for four hours (an entire day)</h2>
+                        <p><b>Save £100</b> and book four hour-long sessions for the entire day.</p>
+                    </div>
+
+                    <br>
+                    <p>
+                        <a class="button" href="home.html">Book from £500</a>
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <p>Need more options? <a href="index.html">Let's chat!</a></p>
+        
+            <script src="scripts/include.js" data-inc="footer.html"></script>
+            </main>
+        </div>
+    </div>
 </body>
 <script>
     const path = 'images/content/'
