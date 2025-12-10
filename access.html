@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Accessibility</title>
 
-    <link id="theme-link" rel="stylesheet" href="styles/conf/colours.css">
-    <link id="font-link" rel="stylesheet" href="styles/conf/fonts.css">
-    <link rel="stylesheet" href="styles/root.css">
-    <link rel="stylesheet" href="styles/interaction.css">
-    <link rel="stylesheet" href="styles/content.css">
-
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
-
+    <script src="scripts/include.js" data-inc="head.html"></script>
     <script defer src="scripts/settings.js"></script>
-    <script defer src="scripts/font-switcher.js"></script>
     <script defer src="scripts/theme-switcher.js"></script>
-    <script defer src="scripts/accessibility.js"></script>
+    <script defer src="scripts/font-switcher.js"></script>
 </head>
 <body>
     <div id="loading" style="font-family: Verdana;" hide>
-        <p>loading...</p>
+        <p style="opacity: 0;">loading...</p>
     </div>
 
     <script src="scripts/loading.js"></script>
@@ -33,21 +21,7 @@
 
     
     <!-- Page Content -->
-    <header>
-        <div class="branding">
-            <img id="logo" src="images/branding/logo-wh.png"></img>
-            <p id="name">The Beardy Bloke</p>
-        </div>
-
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="books.html">Books</a>
-            <a href="talks.html">Talks</a>
-
-            <img src="images/icons/theme-switch.svg" id="theme-switcher"></img>
-        </div>
-
-    </header>
+    <script src="scripts/include.js" data-inc="header.html"></script>
 
     <img class="hr" src="images/hr.png"></img>
 
@@ -73,25 +47,7 @@
         
     </main>
 
-    <footer>
-        <img style="transform: angle(180deg)" class="hr" src="images/hr.png"></img>
-        
-        <div class="socials">
-            <a href="https://www.instagram.com/thebeardybloke110">
-                <img src="images/icons/logos/instagram.svg"></img>
-            </a>
-
-            <a href="https://www.instagram.com/thebeardybloke110">
-                <img src="images/icons/logos/instagram.svg"></img>
-            </a>
-
-            <a href="https://www.instagram.com/thebeardybloke110">
-                <img src="images/icons/logos/instagram.svg"></img>
-            </a>
-        </div>
-
-        <p>© Mark Webb, 2025</p>
-    </footer>
+    <script src="scripts/include.js" data-inc="footer.html"></script>
 </body>
 <script>
 </script>

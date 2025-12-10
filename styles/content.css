@@ -18,14 +18,15 @@ h2 {
 
 /* Loading Screen */
 #loading {
-    position: absolute;
+    /* opacity: 0; */
+    position: fixed;
     left: 0;
     top: 0;
 
     width: 100%;
     height: 100%;
-    background-color: var(--bg-primary);
-    color: var(--bg-primary);
+    background-color: rgb(127, 127, 127);
+    color: rgb(50, 50, 50);
 
     display: flex;
     justify-content: center;
@@ -33,18 +34,18 @@ h2 {
     z-index: 100;
 
     overflow: auto;
-    transition: background-color .5s;
+    /* transition: background-color .5s; */
 }
 
 #loading p {
-    opacity: 1;
-    transition: all 1s;
+    opacity: 0;
+    /* transition: all 1s; */
 }
 
 #loading[hide] {
     opacity: 0;
     pointer-events: none;
-    transition: all 1s;
+    transition: all .5s;
 }
 
 /* Image Text Group */
