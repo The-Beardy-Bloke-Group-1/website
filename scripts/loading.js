@@ -21,5 +21,3 @@ window.addEventListener('load', () => {
         }, 250)
     }, 250)
 })
-
-console.log("Hi")
