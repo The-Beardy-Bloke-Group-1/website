@@ -231,17 +231,13 @@ h2 {
     margin: 0;
 }
 
-.margin-images {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
+.background {
+    position: fixed;
     width: 100%;
     height: 100%;
-}
+    object-fit: cover;
 
-.margin-line-art {
-    opacity: 0.5;
-    filter: invert(var(--brightness)) brightness(0.85);
+    filter: brightness(var(--brightness)) blur(5px);
+
+    z-index: 0;
 }
