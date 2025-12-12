@@ -119,6 +119,11 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    text-shadow: 
+        3px 3px 1px black,
+        0 0 1em black
+    ;
 }
 
 .splash .text h1 {
@@ -240,4 +245,5 @@ h2 {
     filter: brightness(var(--brightness)) blur(5px);
 
     z-index: 0;
+    opacity: var(--bg-opacity);
 }
