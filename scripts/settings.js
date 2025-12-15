@@ -10,3 +10,6 @@ function set_setting(key, value) {
     }
 }
 
+function reset_all_settings() {
+    localStorage.clear()
+}

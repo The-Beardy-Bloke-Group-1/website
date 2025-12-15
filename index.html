@@ -8,6 +8,7 @@
     <script defer src="scripts/theme-switcher.js"></script>
     <script defer src="scripts/font-switcher.js"></script>
     <script defer src="scripts/size-switcher.js"></script>
+    <script defer src="scripts/access-notice.js"></script>
 </head>
 <body>
     <div id="loading" style="font-family: Verdana;" hide>
@@ -29,6 +30,20 @@
             <script src="scripts/include.js" data-inc="header.html"></script>
 
             <img class="hr" src="images/hr.png"></img>
+
+            <dialog id="access-dialog">
+                <div class="content">
+                    <h1>Accessibility Notice</h1>
+                    <p>This website has assistive technology available, should you need it.</p>
+                    <p>To go to the accessibility settings now, press <kbd>ENTER</kbd> on your keyboard.</p>
+                    <p>Settings will always be accessible via the button in the bottom left corner of the screen.</p>
+                </div>
+
+                <div class="user-input">
+                    <button autofocus class="button" id="confirm">Take me there!</button>
+                    <a id="close">I'm fine</a>
+                </div>
+            </dialog>
         
             <!-- Body -->
             <main>

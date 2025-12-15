@@ -32,6 +32,9 @@ a:active {
     border: none;
     border-bottom: 1px dashed var(--text-light);
     box-sizing: border-box;
+    
+    font-family: var(--font-regular);
+    font-size: 1em;
 }
 
 .button:hover {
@@ -39,4 +42,52 @@ a:active {
     filter: none;
     background-color: var(--tertiary-2);
     border-bottom: 1px dashed var(--tertiary-2);
+}
+
+/* Modals */
+dialog {
+    z-index: 10;
+
+    background-color: var(--bg-primary);
+    color: var(--text);
+
+    border: 1px solid var(--tertiary);
+    
+    box-shadow: 0 0 15px black;
+}
+
+dialog h1 {
+    margin-bottom: 0;
+}
+
+dialog .user-input {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1em;
+    align-items: center;
+
+    margin-top: 1em;
+}
+
+dialog .user-input * {
+    margin: 0;
+}
+
+::backdrop {
+    background-color: black;
+    opacity: 0.5;
+}
+
+kbd {
+    border-radius: 0.25rem;
+    border: 0 solid var(--secondary);
+    border-width: 1px 1px 2px;
+
+    padding: 2px;
+
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    /* font-weight: bold; */
+
+    background-color: var(--tertiary);
 }
