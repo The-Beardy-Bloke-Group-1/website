@@ -23,3 +23,7 @@ input:focus, select:focus {
 label {
     font-size: 1em;
 }
+
+.req {
+    color: red;
+}
