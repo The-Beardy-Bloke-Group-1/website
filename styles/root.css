@@ -41,6 +41,7 @@ body {
 
     z-index: 1;
     transition: opacity 1s;
+    transition: all 0.2s;
     opacity: 1;
 }
 

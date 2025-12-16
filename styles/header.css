@@ -1,7 +1,8 @@
 header {
     /* width: 100%; */
     display: flex;
-    /* gap: 1em; */
+    flex-wrap: wrap;
+    gap: 1em;
     padding-top: 2em;
 }
 
@@ -14,12 +15,14 @@ header .branding {
 
 header .nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 2em;
     float: right;
     align-items: center;
     justify-content: end;
 
     margin-left: auto;
+    /* margin-right: auto; */
 
     padding: 0 1em;
 
@@ -46,6 +49,16 @@ header .branding #name {
     margin: 0;
 }
 
+/* <a> overrides */
+header #branding-link {
+    border: none !important;
+}
+
+header #branding-link:hover {
+    border: none !important;
+}
+
+/* Theme Switcher */
 #theme-switcher {
     filter: brightness(var(--brightness));
     cursor: pointer;

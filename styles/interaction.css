@@ -22,6 +22,13 @@ a:active {
     border-bottom: 2px var(--secondary) solid;
 }
 
+a:focus {
+    /* border: 2px solid var(--secondary); */
+    border-bottom: 2px solid var(--primary);
+
+    outline: none;
+}
+
 .button {
     margin-top: 1em;
     padding: 10px;
@@ -42,6 +49,13 @@ a:active {
     filter: none;
     background-color: var(--tertiary-2);
     border-bottom: 1px dashed var(--tertiary-2);
+}
+
+.button:focus {
+    border: 2px solid var(--primary);
+    border-radius: 3px;
+
+    outline: none;
 }
 
 /* Modals */
@@ -90,4 +104,5 @@ kbd {
     /* font-weight: bold; */
 
     background-color: var(--tertiary);
+    color: var(--text-light);
 }
