@@ -90,7 +90,7 @@
                             </ul>
                         </div>
                         <p>
-                            <a class="button" href="contact.html">Book from £150</a>
+                            <a class="button" href="booking.html">Book from £150</a>
                         </p>
                     </div>
 
@@ -103,7 +103,7 @@
 
                         <br>
                         <p>
-                            <a class="button" href="contact.html">Book from £500</a>
+                            <a class="button" href="booking.html">Book from £500</a>
                         </p>
                     </div>
                 </div>
@@ -116,47 +116,4 @@
         </div>
     </div>
 </body>
-<script>
-    const path = 'images/content/'
-    const files = ['thebeardybloke.png', 'theblackdoggybloke.png', 'theribbonybloke.png', 'theworldybloke.png', 'theshoppybloke.png', 'thechairybloke.png', 'theveggieblokes.png', 'thetoolyblokes.png', 'theambulancebloke.png', 'thehandcuffyblokes.png', 'theunicornybloke.png', 'thebinnybloke.png', 'thecattybloke.png', 'thedoggybloke.png', 'thebottlebloke.png', 'thefoxyblokeandtherabbitybloke.png', 'theapplyblokeandthebookyblokes.png', 'theboatybloke.png', 'thefatheryblokeandthedaughterybloke.png', 'theglassybloke.png', 'theheartybloke.png', 'themaskyblokes.png', 'themotheryblokeandthedaughterybloke.png', 'theteachybloke.png', 'thetoilettybloke.png',]
-    const imgs = document.querySelectorAll('[id = "bgimg"]')
-    for(let i = 0; i < imgs.length; i++){
-        j = Math.floor(Math.random()*files.length);
-        var url = (path + files[j]);
-        var rotation = Math.floor(Math.random() * 60) - 30;
-        var position = Math.floor(Math.random() * 100);
-        imgs.item(i).src = url;
-        imgs.item(i).style.transform = "translateX(" + position + "%)" + "rotate(" + rotation + "deg)"
-    }
-    
-    let index = 1;
-    review(index);
-
-    function current(n) {
-        review(index = n,false);
-    }
-    function review(n,auto=true) {
-        let i;
-        let reviews = document.getElementsByClassName("reviews");
-        let dots = document.getElementsByClassName("dot");
-
-        if (n > reviews.length) { index = 1 }
-        if (n < 1) { index = reviews.length }
-
-        for (i = 0; i < reviews.length; i++) {
-            reviews[i].style.display = "none";
-        }
-
-        for (i = 0; i < dots.length; i++) {
-            dots[i].classList.remove("active");
-        }
-
-        reviews[index - 1].style.display = "flex";
-        dots[index - 1].classList.add("active");
-
-        index++;
-
-        if (auto==true){setTimeout(() => review(index), 5000);}
-    }
-</script>
 </html>

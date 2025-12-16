@@ -1,0 +1,25 @@
+input, select {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: var(--bg-primary);
+    color: var(--text);
+
+    font-family: var(--font-regular);
+
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+
+    padding: 5px;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+input:focus, select:focus {
+    border: 2px dashed var(--primary);
+    outline: none;
+}
+
+label {
+    font-size: 1em;
+}

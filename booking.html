@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Beardy Bloke</title>
+
+    <script src="scripts/include.js" data-inc="head.html"></script>
+    <script defer src="scripts/settings.js"></script>
+    <script defer src="scripts/theme-switcher.js"></script>
+    <script defer src="scripts/font-switcher.js"></script>
+    <script defer src="scripts/size-switcher.js"></script>
+    <script defer src="scripts/access-notice.js"></script>
+</head>
+<body>
+    <div id="loading" style="font-family: Verdana;" hide>
+        <p style="opacity: 0;">loading...</p>
+    </div>
+
+    <script src="scripts/loading.js"></script>
+
+    <div class="page-container">
+        <img class="background" src="images/content/background.png"></img>
+
+        <!-- Page Content -->
+        <div class="body" style="opacity: 0;">
+            <a id="access-button" href="access.html">
+                <img src="images/icons/access.svg"></img>
+            </a>
+
+            <!-- Header -->
+            <script src="scripts/include.js" data-inc="header.html"></script>
+
+            <img class="hr" src="images/hr.png"></img>
+            <script src="scripts/include.js" data-inc="elements/access_dialog.html"></script>
+        
+            <!-- Body -->
+            <main>
+                <h1>Book The Beardy Bloke</h1>
+                <form action="mailto:example@example.com" method="post" enctype="text/plain">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" autocomplete="name">
+                    
+                    <label for="when">Booking Date</label>
+                    <input type="datetime-local" name="when" autocomplete="none">
+
+                    <label for="type">Booking Type</label>
+                    <select name="type">
+                        <option value="single">Single Session (£150)</option>
+                        <option value="day">Full Day (£500)</option>
+                    </select>
+                    
+                    <label for="where">Where are you located?</label>
+                    <input type="text" name="where" autocomplete="none">
+
+                    <label for="comments">Comments</label>
+                    <input type="text" name="comments" autocomplete="none">
+                    
+                </form>
+            </main>
+        
+            <!-- Footer -->
+            <script src="scripts/include.js" data-inc="footer.html"></script>
+        </div>
+    </div>
+    
+</body>
+</html>
