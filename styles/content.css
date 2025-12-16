@@ -256,11 +256,11 @@ h2 {
 .notice .head {
     background-color: rgb(141, 27, 27);
     color: rgb(255, 200, 200);
-    margin-bottom: 3px;
 
-    padding: 5px;
-    
-    border-radius: 5px 5px 3px 3px;
+    font-weight: bold;
+    font-size: 1.2em;
+
+    padding: 10px;
 }
 
 .notice .content {
@@ -268,9 +268,8 @@ h2 {
     color: rgb(141, 27, 27);
 
     border: 1px solid rgb(141, 27, 27);
-    border-radius: 3px 3px 5px 5px;
 
-    padding: 5px;
+    padding: 10px;
 }
 
 .notice * {
