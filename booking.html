@@ -35,48 +35,61 @@
             <!-- Body -->
             <main>
                 <h1>Book The Beardy Bloke</h1>
-                <form action="mailto:example@example.com" method="post" enctype="text/plain">
-                    <label for="name">
-                        Full Name
-                        <span class="req">*</span>
-                    </label>
-                    <input required type="text" name="name" autocomplete="name">
-                    
-                    <label for="when">
-                        Booking Date
-                        <span class="req">*</span>
-                    </label>
-                    <input required type="datetime-local" name="when" autocomplete="none">
+                <div class="image-text-group">
+                    <img class="line-art image" src="images/content/art/book.png"></img>
 
-                    <label for="type">
-                        Booking Type
-                        <span class="req">*</span>
-                    </label>
-                    <select name="type">
-                        <option value="single">Single Session (£150)</option>
-                        <option value="day">Full Day (£500)</option>
-                    </select>
-                    
-                    <label for="where">Where are you located?</label>
-                    <input required type="text" name="where" autocomplete="none">
-
-                    <label for="comments">Comments</label>
-                    <input type="text" name="comments" autocomplete="none">
-
-                    <p><span class="req">*</span> - Required field</p>
-                    <input type="submit" class="button">
-                    
-                    
-
-                    <p>
-                        Clicking submit will prompt you to send an email.
-                        Without making any changes to the email, provide a subject and then send it.
-                    </p>
-                    <p>
-                        The email you send the form from will be used to contact you in the future,
-                        so please ensure you are using the correct one.
-                    </p>
-                </form>
+                    <div class="text">
+                        <form action="mailto:example@example.com" method="post" enctype="text/plain">
+                            <label for="name">
+                                Full Name
+                                <span class="req">*</span>
+                            </label>
+                            <input required type="text" name="name" autocomplete="name">
+                            
+                            <label for="when">
+                                Booking Date
+                                <span class="req">*</span>
+                            </label>
+                            <input required type="datetime-local" name="when" autocomplete="none">
+        
+                            <label for="type">
+                                Booking Type
+                                <span class="req">*</span>
+                            </label>
+                            <select name="type">
+                                <option value="single">Single Session (£150)</option>
+                                <option value="day">Full Day (£500)</option>
+                            </select>
+                            
+                            <label for="where">
+                                Where are you located?
+                                <span class="req">*</span>
+                            </label>
+                            <input required type="text" name="where" autocomplete="none">
+        
+                            <label for="comments">Comments</label>
+                            <input type="text" name="comments" autocomplete="none">
+        
+                            <p><span class="req">*</span> - Required field</p>
+                            <input type="submit" class="button">
+                            
+                            
+        
+                            <p>
+                                Clicking submit will prompt you to send an email.
+                                Without making any changes to the email, provide a subject and then send it.
+                            </p>
+                            <p>
+                                The email you send the form from will be used to contact you in the future,
+                                so please ensure you are using the correct one.
+                            </p>
+                            <p>
+                                Need something else?
+                                <a href="contact.html">Let's chat!</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
             </main>
         
             <!-- Footer -->
