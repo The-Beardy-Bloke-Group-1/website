@@ -56,6 +56,7 @@ a:focus {
     border-radius: 3px;
 
     outline: none;
+    transition: none;
 }
 
 /* Modals */

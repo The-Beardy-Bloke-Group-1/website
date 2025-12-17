@@ -13,6 +13,8 @@ input, select {
     padding: 5px;
     margin-top: 0.5em;
     margin-bottom: 1.5em;
+
+    transition: all 0.2s;
 }
 
 input:focus, select:focus {
@@ -25,5 +27,5 @@ label {
 }
 
 .req {
-    color: red;
+    color: var(--primary);
 }
