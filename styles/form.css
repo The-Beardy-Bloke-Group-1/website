@@ -2,10 +2,12 @@ input, select {
     width: 100%;
     box-sizing: border-box;
 
+    /* background-color: rgba(0, 0, 0, 0.2); */
     background-color: var(--bg-primary);
     color: var(--text);
 
     font-family: var(--font-regular);
+    font-size: 1em;
 
     border: 2px solid var(--secondary);
     border-radius: 5px;
@@ -17,13 +19,19 @@ input, select {
     transition: all 0.2s;
 }
 
+/* select {
+    background-color: var(--tertiary);
+} */
+
 input:focus, select:focus {
     border: 2px dashed var(--primary);
+    /* background-color: rgba(0, 0, 0, 0); */
     outline: none;
 }
 
 label {
     font-size: 1em;
+    /* display: none; */
 }
 
 .req {
