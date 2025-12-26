@@ -13,6 +13,7 @@ a {
 a:hover {
     /* text-decoration: none !important; */
     border-bottom: 2px var(--secondary) dashed;
+    /* background-color: var(--tertiary-2); */
 
     filter: brightness(calc(1 + var(--brightness)));
 }

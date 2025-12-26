@@ -131,9 +131,10 @@ h2 {
 }
 
 .quote {
-    font-size: 1.25em;
-    font-style: italic;
+    font-size: 1em;
+    /* font-style: italic; */
     margin-bottom: 1em;
+    font-family: var(--font-head);
 }
 
 #access-button {
