@@ -1,3 +1,7 @@
+// accessibility.js
+// --> Script for access.html
+
+// Configuration
 const themes = {
     '': 'Dark (Default)',
     'light': "Light",
@@ -6,7 +10,7 @@ const themes = {
 
 const fonts = {
     '': 'Default',
-    'dyslexia': "Dyslexic",
+    'dyslexia': "Open Dyslexic",
     'roboto': "Simple"
 }
 
@@ -16,30 +20,24 @@ const fontsizes = {
     'large': "Large"
 }
 
+const overlays = {
+    '': "None",
+    'red': "Red",
+    'blue': "Blue",
+    'green': "Green",
+    'purple': "Purple",
+    'orange': "Orange"
+}
+
+// Variables
 const theme_list = document.querySelector("#theme-list")
 const font_list = document.querySelector("#font-list")
 const size_list = document.querySelector("#size-list")
+const overlay_list = document.querySelector("#overlay-list")
+
 const reset_button = document.querySelector("#reset")
 
-// for (const [theme_name, display_name] of Object.entries(themes)) {
-//     const li = document.createElement("li")
-//     const a = document.createElement("a")
-
-//     a.innerHTML = display_name
-
-//     li.appendChild(a)
-//     theme_list.appendChild(li)
-
-//     a.addEventListener("mousedown", () => {
-//         let name = theme_name
-//         if ( theme_name == "" ) {
-//             name = null
-//         }
-
-//         change_theme(name)
-//     })
-// }
-
+// Functions
 function init_setting(parent, options, callback) {
     for (const [internal_name, display_name] of Object.entries(options)) {
         const li = document.createElement("li")
@@ -56,6 +54,7 @@ function init_setting(parent, options, callback) {
     }
 }
 
+// Runtime
 init_setting(theme_list, themes, (internal_name) => {
     let name = internal_name
     if ( internal_name == "" ) {
@@ -81,6 +80,15 @@ init_setting(size_list, fontsizes, (internal_name) => {
     }
 
     change_size(name)
+})
+
+init_setting(overlay_list, overlays, (internal_name) => {
+    let name = internal_name
+    if ( internal_name == "" ) {
+        name = null
+    }
+
+    change_overlay(name)
 })
 
 reset_button.addEventListener("click", () => {

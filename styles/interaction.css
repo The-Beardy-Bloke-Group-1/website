@@ -108,3 +108,19 @@ kbd {
     background-color: var(--tertiary);
     color: var(--text-light);
 }
+
+.link-list a {
+    background-color: var(--tertiary);
+    color: var(--text-light);
+
+    border-radius: 3px;
+    border: 1px solid var(--secondary);
+    
+    padding: 3px 1em;
+}
+
+.link-list a:hover {
+    border: 1px solid var(--tertiary-2);
+    box-shadow: 0px 0px 5px var(--tertiary-2);
+    /* text-shadow: 0 0 2px var(--text-light); */
+}

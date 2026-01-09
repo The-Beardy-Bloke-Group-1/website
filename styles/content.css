@@ -48,6 +48,23 @@ h2 {
     transition: all .5s;
 }
 
+#overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgba(193, 242, 255, 0.2); */
+    background-color: var(--overlay);
+    z-index: 2;
+
+    pointer-events: none;
+
+    transition: all 0.5s;
+}
+
 /* Image Text Group */
 .image-text-group {
     display: flex;
