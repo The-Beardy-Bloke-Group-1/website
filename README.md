@@ -1,4 +1,3 @@
 # website
 
-TODO
-* Screen filters for dyslexia
+see https://the-beardy-bloke-group-1.github.io/website/
